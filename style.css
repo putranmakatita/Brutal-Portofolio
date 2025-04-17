@@ -1,0 +1,156 @@
+  /* Aesthetic Brutalism */
+  :root {
+      --black: #000000;
+      --white: #FFFFFF;
+      --red: #FF3E41;
+      --yellow: #FFD166;
+      --blue: #1E90FF;
+      --gray: #333333;
+  }
+
+  body {
+      font-family: 'Courier New', monospace;
+      background-color: var(--black);
+      color: var(--white);
+      margin: 0;
+      padding: 0;
+      line-height: 1.5;
+      overflow-x: hidden;
+  }
+
+  .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem;
+      border: 4px solid var(--red);
+  }
+
+  header {
+      text-align: center;
+      margin-bottom: 3rem;
+      padding: 1rem;
+      border-bottom: 2px dashed var(--yellow);
+  }
+
+  h1 {
+      font-size: 1.8rem;
+      margin: 0;
+      text-transform: uppercase;
+      letter-spacing: -1px;
+      color: var(--red);
+  }
+
+  h2 {
+      font-size: 1.8rem;
+      margin: 2rem 0 1rem;
+      color: var(--yellow);
+      text-transform: uppercase;
+  }
+
+  h3 {
+      font-size: 1.4rem;
+      margin: 1.5rem 0 0.5rem;
+      color: var(--blue);
+  }
+
+  p {
+      margin: 0 0 1rem;
+  }
+
+  a {
+      color: var(--blue);
+      text-decoration: none;
+      border-bottom: 1px dashed var(--blue);
+  }
+
+  a:hover {
+      color: var(--yellow);
+      border-bottom: 1px solid var(--yellow);
+  }
+
+  .project {
+      margin-bottom: 2rem;
+      padding: 1rem;
+      border-left: 3px solid var(--red);
+      background: rgba(30, 30, 30, 0.5);
+  }
+
+  .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 1rem 0;
+  }
+
+  .skill {
+      background: var(--gray);
+      color: var(--white);
+      padding: 0.3rem 0.8rem;
+      font-size: 0.9rem;
+  }
+
+  footer {
+      text-align: center;
+      margin-top: 3rem;
+      padding: 1rem;
+      border-top: 2px dashed var(--yellow);
+  }
+
+  /* Glitch effect on hover */
+  .glitch {
+      position: relative;
+  }
+
+  .glitch:hover {
+      text-shadow:
+          2px 0 var(--blue),
+          -2px 0 var(--red);
+      animation: glitch 0.3s infinite;
+  }
+
+  @keyframes glitch {
+      0% {
+          transform: translate(0);
+      }
+
+      20% {
+          transform: translate(-2px, 2px);
+      }
+
+      40% {
+          transform: translate(-2px, -2px);
+      }
+
+      60% {
+          transform: translate(2px, 2px);
+      }
+
+      80% {
+          transform: translate(2px, -2px);
+      }
+
+      100% {
+          transform: translate(0);
+      }
+  }
+
+  /* Terminal-like blinking cursor */
+  .cursor {
+      display: inline-block;
+      width: 8px;
+      height: 1.2rem;
+      background: var(--red);
+      animation: blink 1s step-end infinite;
+  }
+
+  @keyframes blink {
+
+      0%,
+      100% {
+          opacity: 1;
+      }
+
+      50% {
+          opacity: 0;
+      }
+  }
